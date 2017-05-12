@@ -1,17 +1,17 @@
 server:
-  port: 8010
+  port: 8880
   contextPath: /uaa
 
 spring:
   application:
     name: auth-service
-  ldap:
-    embedded:
-      ldif: classpath:/test-server.ldif
 
 security:
   oauth:
     signing: token123
-  user:
-    password: pass123
+
+test:
+  security:
+    user:
+      password: benspassword
 
