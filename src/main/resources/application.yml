@@ -5,6 +5,11 @@ server:
 spring:
   application:
     name: auth-service
+  ldap:
+    embedded:
+      base-dn: "dc=sidenis,dc=com"
+      port: 9321
+      ldif: classpath:/test-server.ldif
 
 security:
   oauth:
@@ -13,5 +18,5 @@ security:
 test:
   security:
     user:
+      name: ben
       password: benspassword
-
